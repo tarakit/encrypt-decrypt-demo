@@ -6,6 +6,16 @@ There're 2 methods isEvent and encryptDecrypt.
 
 `static boolean isEven(int n)` returns true if n is even, else odd
 
+## isEvent(int n)
+
+this method use to find odd or even number
+
+- ((n & 1)!=1)
+- ((n ^ 1) == n + 1)
+- ((n | 1) > n)
+
+All of them equal to (n % 2) == 0
+
 `static String encryptDecrypt(String inputString)` the same function is used to encrypt and decrypt
 
 ## Testing
