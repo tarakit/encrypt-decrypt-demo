@@ -8,6 +8,16 @@ There're 2 methods isEvent and encryptDecrypt.
 
 ## isEvent(int n)
 
+```bash
+ static boolean isEven(int n)
+    {
+        // n&1 is 1, then odd, else even
+        // return ((n & 1)!=1);
+        // return ((n ^ 1) == n + 1);
+        return ((n | 1) > n);
+    }
+```
+
 this method use to find odd or even number
 
 - ((n & 1)!=1)
@@ -17,6 +27,25 @@ this method use to find odd or even number
 All of them equal to (n % 2) == 0
 
 `static String encryptDecrypt(String inputString)` the same function is used to encrypt and decrypt
+
+```bash
+static String encryptDecrypt(String inputString)
+    {
+        char xorKey = 'P';
+
+        // Define String to store encrypted/decrypted String
+        String outputString = "";
+
+        // perform XOR operation of key
+        // with every character in string
+        for (int i = 0; i < inputString.length(); i++)
+        {
+            outputString += Character.toString(inputString.charAt(i) ^ xorKey);
+        }
+        System.out.println(outputString);
+        return outputString;
+    }
+```
 
 ## Testing
 
